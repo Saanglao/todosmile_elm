@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Marvel';
+    src: url('./assets/fonts/Marvel-regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./assets/fonts/OpenSans-Bold.ttf') format('ttf');
+}
+
+:root {
+    --black: #1F1E1E;
+    --white: #fff;
+}
+
+::placeholder {
+    color: #e3e3e3;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    font-family: OpenSans, Helvetica, sans-serif;
+    color: var(--black);
+    font-weight: 200;
+}
+
+#app {
+    padding: 1.7em 0;
+    height: calc(100vh - 2em);
+    width: 100vw;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    padding: 0;
+    user-select: none;
+}
+
+header {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+header h1 {
+    font-family: 'Marvel', Arial, Helvetica, sans-serif;
+    font-size: 5em;
+    margin: 0;
+}
+
+header h3 {
+    font-family: 'OpenSans', Helvetica, sans-serif;
+    font-weight: 200;
+    margin: 0;
+}
+
+.todos-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+.todos-container li {
+    transition: all 200ms ease-in-out;
+    list-style: none;
+    font-size: 1.4em;
+    padding: 8px 10px;
+    position: relative;
+    min-height: 20px;
+}
+
+.todos-container li.is-done {
+    text-decoration: line-through;
+}
+
+.todos-container li:hover {
+    background-color: var(--black);
+    color: var(--white);
+    cursor: pointer;
+}
+
+input {
+    transition: border 200ms ease;
+    border: 0;
+    font-size: 2em;
+    text-align: center;
+    font-weight: 200;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--white);
+    padding: 15px;
+}
+
+input:active,
+input:focus {
+    border-bottom: 1px solid var(--black);
+    outline: none;
+}
+
+input:hover {
+    cursor: pointer;
+}

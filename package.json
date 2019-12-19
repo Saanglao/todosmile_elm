@@ -1,0 +1,31 @@
+{
+  "name": "todosmile_elm",
+  "version": "1.0.0",
+  "description": "Elm To:Do simple app",
+  "main": "scr/index/html",
+  "scripts": {
+    "start": "yarn serve & yarn watch",
+    "serve": "pushstate-server",
+    "watch": "chokidar 'src/**/*.elm' -c 'elm make src/Main.elm --optimize --output=public/elm.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saanglao/todosmile_elm.git"
+  },
+  "keywords": [
+    "elm",
+    "todo",
+    "tutorial"
+  ],
+  "author": "Phet <phet@littlescrawl.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Saanglao/todosmile_elm/issues"
+  },
+  "homepage": "https://github.com/Saanglao/todosmile_elm#readme",
+  "devDependencies": {
+    "chokidar": "^3.3.0",
+    "chokidar-cli": "^2.1.0",
+    "pushstate-server": "^3.1.0"
+  }
+}
